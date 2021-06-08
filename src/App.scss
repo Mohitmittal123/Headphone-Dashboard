@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$roboto: 'Roboto';
+$cursive_font:'Satisfy';
+$round:'Varela Round';
+$cta: #fe8033;
+$bg: #272b34;
+$light_bg:#2b3039;
+$text:#2d343e;
+$white:#fff;
+
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: $round;
+}
+
+.dflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 30px 50px 20px 50px;
+    box-sizing: border-box;
+    background-color: $bg;
+    cursor: pointer;
+
+    
+
+}
+
+
+nav{
+    @extend .dflex;
+    justify-content: space-between;
+    width: 100%;
+    color: $white;
+    .logo{
+        font-size: 30px;
+        text-transform: uppercase;
+        color: rgba($white, .7);
+
+    }
+    ul{
+      @extend .dflex;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+       li{
+           font-size: 14px;
+           margin-left: 14px;
+           padding: 10px;
+           box-sizing: border-box;
+           color: rgba($white, .7);
+           cursor: pointer;
+
+       }
+       li:hover{
+        transform: scale(1.2);
+       }
+
+    }
+    
+    .search{
+        color: rgba($white, .7);
+        .searchicon{
+            cursor: pointer;
+            width: 30%;
+
+            +.fa{
+                margin-left: 15px;
+            }
+
+        }
+
+    }
+
+}
+.main_content{
+    @extend .dflex;
+     position: relative;
+     width:70%;
+     height: 100%;
+     margin: 50px auto;
+     padding: 50px 0 0;
+     box-sizing: border-box;
+     justify-content: space-between;
+      flex-wrap: wrap;
+      h1{
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: $text;
+          font-size: 10.5vw;
+
+      }
+      .card{
+          width: 30%;
+          border-radius: 15px;
+         
+          flex-direction: column;
+          position: relative;
+          transform: scale(.8);
+          transition: all .3s ease-in-out;
+          margin-bottom: 50px;
+          margin-left: 15px;
+          .card_img{
+              margin-top: -5vw;
+              img{
+                  width: 200px;
+              }
+          }
+          .card_header{
+              @extend .dflex;
+              color: $white;
+              margin: 25px 0;
+              flex-direction: column;
+              h2{
+                  font-size: 18px;
+              }
+              p{
+                  font-size: 17px;
+                  text-align: center;
+                  color: rgba($white,.3);
+                margin: 8px 0;
+              }
+              .price{
+                  font-size: 25px;
+                  color:$cta ;
+                  span{
+                      font-size: 15px;
+                      display: inline-block;
+                      vertical-align: top;
+                  }
+                  
+
+              }
+
+
+          }
+
+
+      }
+      .card:hover{
+          background-color: $light_bg;
+          transform: scale(1.1);
+          cursor: pointer;
+      }
+
+      .card:hover{
+          .btn{
+                background-color: $cta;
+                 color: $white;
+          }
+      }
+
+}
+.btn{
+    width: 110px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 35px;
+    background-color: $text;
+    color: rgba($white, .5);
+    @extend .dflex;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color .3s ease;
+   
+}
+
+.footer{
+    @extend .dflex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: auto;
+    color: rgba($white,.3);
+    font-size: 12px;
+   
+    }
+
+
+
+
+
